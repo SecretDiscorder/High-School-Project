@@ -1,64 +1,71 @@
-# High_School_Project
+# 🎓 High School Project — Kumpulan APK Proyek Sekolah
 
-Go to Releases Page
+Repositori ini berisi kumpulan aplikasi Android (APK) hasil proyek sekolah untuk berbagai kebutuhan pendidikan seperti ujian online, penjadwalan, hingga browser khusus.
 
-For SHIMA and EXAMBROWSER
+---
 
-# README.md
+## 📦 Daftar Aplikasi
 
-## Masalah: Error "Display over other apps Feature Not Available" di Smartphone Android
+* **CBTSMANCAV11.apk** — Aplikasi ujian CBT untuk MAN CAV
+* **PBSSI\_JAYA\_BROWSER.apk** — Browser khusus untuk keperluan internal
+* **PENJADWALAN\_KERJA\_FINAL.apk** — Aplikasi penjadwalan kerja
+* **PRATA\_EXAMBRO.apk** — Browser aman untuk ujian berbasis Android
+* **SHIMA\_LAST.apk** — Aplikasi ujian SHIMA
 
-Teman Anda baru-baru ini membeli smartphone Samsung Galaxy dengan anggaran rendah dan saat mencoba menginstal aplikasi, dia menerima pesan error berikut di layar penuh:
+---
 
-**Display over other apps**  
-**Feature not available**  
-**This feature has been turned off because it slows down your phone.**
+## ⚠️ Masalah Umum: "Display over other apps Feature Not Available"
 
-Dia mencoba menginstal aplikasi pengunci orang tua atau aplikasi kunci untuk membatasi aplikasi di smartphone-nya, tetapi setiap kali menginstal aplikasi seperti AppLock dari SpSoft, Norton App Lock, dan lainnya, selalu gagal dengan pesan error tersebut.
+Beberapa pengguna mengalami error saat menjalankan aplikasi yang memerlukan izin overlay:
 
-### Penyebab: Fungsionalitas Screen Overlays Dinonaktifkan oleh Pabrikan Smartphone
+```
+Display over other apps
+Feature not available
+This feature has been turned off because it slows down your phone.
+```
 
-Pesan error ini muncul karena fitur "Display over other apps" (juga dikenal sebagai "Draw over other apps" atau "Appear on Top") dinonaktifkan. Fitur ini memungkinkan aplikasi pihak ketiga muncul di atas aplikasi lain, dan sering kali dibatasi untuk aplikasi sistem demi keamanan pengguna.
+### 🔍 Penyebab
 
-Pabrikan smartphone sering menonaktifkan fitur ini pada smartphone anggaran untuk meningkatkan performa, mengingat fitur ini dapat mengonsumsi banyak CPU dan RAM.
+Fitur "Display over other apps" dinonaktifkan oleh produsen smartphone (terutama di perangkat low-end) untuk meningkatkan performa.
 
-### Solusi
+---
 
-#### Solusi 1: Mengaktifkan Izin Display Over Other Apps Secara Manual
+## 🛠️ Solusi
 
-1. Buka layar utama atau layar peluncur aplikasi.
-2. Tekan dan tahan ikon aplikasi untuk membuka menu.
-3. Ketuk ikon Info (i) di sudut kanan atas.
-4. Cari opsi "Appear on Top" atau "Display over other apps".
-5. Jika ada, aktifkan toggle menjadi ON.
+### 1. Aktifkan Izin Lewat Pengaturan Aplikasi
 
-#### Solusi 2: Mengaktifkan Pengaturan Screen Overlays Menggunakan Developer Options
+* Tekan dan tahan ikon aplikasi → Info aplikasi → "Tampil di atas aplikasi lain" → Aktifkan.
 
-1. Aktifkan Developer Options dengan membuka **Settings > About phone > Build number** sebanyak 7 kali.
-2. Masuk ke **Developer Options**.
-3. Cari opsi "Allow screen overlays" dan aktifkan.
+### 2. Aktifkan via Developer Options
 
-#### Solusi 3: Mengaktifkan Izin Appear on Top Menggunakan Special Access
+* Buka `Settings > About phone > tap Build number 7x` → Developer Options → Aktifkan "Allow screen overlays".
 
-1. Buka **Settings** dan ketik "Special Access" di kotak pencarian.
-2. Pilih opsi Special Access.
-3. Pilih "Appear on Top" dan aktifkan toggle untuk aplikasi yang bermasalah.
+### 3. Akses Khusus (Special Access)
 
-#### Solusi 4: Memberikan Izin SYSTEM_ALERT_WINDOW Menggunakan ADB Command
+* `Settings > Special Access > Appear on Top` → Aktifkan untuk aplikasi terkait.
 
-1. Unduh dan instal **ADB** (Android Debug Bridge) di PC Anda.
-2. Aktifkan USB debugging di smartphone melalui **Developer Options**.
-3. Hubungkan smartphone ke PC dan buka Command Prompt di folder Platform-Tools.
-4. Jalankan perintah `adb devices` untuk memeriksa koneksi.
-5. Temukan nama paket aplikasi di URL Play Store.
-6. Jalankan perintah berikut :
+### 4. Gunakan ADB (Android Debug Bridge)
 
-   ```
-   adb shell pm grant shima.kartinisoft.exambro android.permission.SYSTEM_ALERT_WINDOW
-   ```
+```bash
+adb shell pm grant shima.kartinisoft.exambro android.permission.SYSTEM_ALERT_WINDOW
+```
 
-### Catatan Tambahan
+> Pastikan USB Debugging aktif dan ADB sudah terpasang di PC Anda.
 
-Jika semua langkah di atas gagal, pertimbangkan untuk menggunakan aplikasi alternatif yang tidak memerlukan fitur overlay, atau periksa pembaruan perangkat lunak yang mungkin memperbaiki masalah ini.
+---
 
-Dengan mengikuti langkah-langkah ini, Anda seharusnya dapat mengatasi masalah "Display over other apps feature not available" dan menggunakan aplikasi yang diinginkan.
+## 📥 Rilis Terbaru
+
+Lihat rilis: [Python\&CPP.apk](https://github.com/SecretDiscorder/High_School_Project/releases)
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html).
+
+---
+
+## 👨‍💻 Kontributor
+
+* [SecretDiscorder](https://github.com/SecretDiscorder)
